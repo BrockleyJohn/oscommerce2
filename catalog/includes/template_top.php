@@ -32,9 +32,6 @@
 <link href="ext/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="stylesheet.css" rel="stylesheet">
 
-<!-- User  -->
-<link href="user.css" rel="stylesheet">
-
 <!--[if lt IE 9]>
    <script src="ext/js/html5shiv.js"></script>
    <script src="ext/js/respond.min.js"></script>
@@ -47,6 +44,9 @@
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 <?php echo $oscTemplate->getBlocks('header_tags'); ?>
+
+<!-- User  -->
+<link href="user.css" rel="stylesheet">
 </head>
 <body>
 
