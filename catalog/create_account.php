@@ -138,7 +138,7 @@
           $messageStack->add('create_account', ENTRY_STATE_ERROR_SELECT);
         }
       } else {
-        if (strlen($state) < ENTRY_STATE_MIN_LENGTH) {
+        if (defined('ENTRY_STATE_MIN_LENGTH') && strlen($state) < ENTRY_STATE_MIN_LENGTH) {
           $error = true;
 
           $messageStack->add('create_account', ENTRY_STATE_ERROR);
