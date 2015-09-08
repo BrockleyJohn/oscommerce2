@@ -624,10 +624,10 @@
           }
         }
 //------insert customer choosen option eof ----
-        $total_weight += ($order->products[$i]['qty'] * $order->products[$i]['weight']);
+/*        $total_weight += ($order->products[$i]['qty'] * $order->products[$i]['weight']);
         $total_tax += tep_calculate_tax($total_products_price, $products_tax) * $order->products[$i]['qty'];
         $total_cost += $total_products_price;
-
+*/
         $products_ordered .= $order->products[$i]['qty'] . ' x ' . $order->products[$i]['name'] . ' (' . $order->products[$i]['model'] . ') = ' . $currencies->display_price($order->products[$i]['final_price'], $order->products[$i]['tax'], $order->products[$i]['qty']) . $products_ordered_attributes . "\n";
       }
 
@@ -664,7 +664,8 @@
                         EMAIL_SEPARATOR . "\n";
         $payment_class = $$payment;
         $email_order .= $payment_class->title . "\n\n";
-        if ($payment_class->email_footer) {
+//        if ($payment_class->email_footer) {
+        if (property_exists(get_class($payment_class),'email_footer') {
           $email_order .= $payment_class->email_footer . "\n\n";
         }
       }
