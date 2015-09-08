@@ -665,7 +665,7 @@
         $payment_class = $$payment;
         $email_order .= $payment_class->title . "\n\n";
 //        if ($payment_class->email_footer) {
-        if (property_exists(get_class($payment_class),'email_footer') {
+        if (property_exists(get_class($payment_class),'email_footer')) {
           $email_order .= $payment_class->email_footer . "\n\n";
         }
       }
